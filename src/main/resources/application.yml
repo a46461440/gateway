@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://server1:11111/eureka,http://server2:11112/eureka
+server:
+  port: 5555
+zuul:
+  ignored-patterns: /**/hello1/**
+#zuul:
+#  routes:
+#    HELLO-PROVIDER:
+#      path: /hello-server/**
+#      serviceId: HELLO-PROVIDER
+
